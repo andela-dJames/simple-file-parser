@@ -1,6 +1,7 @@
 package checkpoint.andela.parser;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  * Created by Oluwatosin on 11/5/2015.
@@ -27,4 +28,5 @@ public class KeyValue implements Serializable {
     public void setValue(String value) {
         this.value = value;
     }
+
 }

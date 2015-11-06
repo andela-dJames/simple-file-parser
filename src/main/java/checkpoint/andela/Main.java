@@ -1,46 +1,27 @@
 package checkpoint.andela;
 
-import checkpoint.andela.parser.KeyValue;
+import checkpoint.andela.parser.*;
+import checkpoint.andela.temp.TempBuffer;
 
 import java.io.*;
+import java.nio.Buffer;
+import java.util.ArrayList;
 
 /**
  * Created by Oluwatosin on 11/5/2015.
  */
 public class Main {
     public static void main(String[] args) {
-        KeyValue kv = new KeyValue();
-        KeyValue kvnew = null;
-        kv.setKey("Daniel");
-        kv.setValue("James");
-        System.out.println(kv.getKey()+kv.getValue());
+        TempBuffer logBuffer = new TempBuffer();
+        KeyValue value = new KeyValue();
         try {
-            FileOutputStream f = new FileOutputStream("Serialized.ser");
-            ObjectOutputStream o = new ObjectOutputStream(f);
-            o.writeObject(kv);
-            f.close();
-            o.close();
-        }
-        catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+            logBuffer.insert(value);
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
-        try {
-            FileInputStream in = new FileInputStream("Serialized.ser");
-            ObjectInputStream oj = new ObjectInputStream(in);
-            kvnew = (KeyValue) oj.readObject();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
+        System.out.println(logBuffer.capacity());
 
-        System.out.println(kvnew.getKey() +kvnew.getValue());
 
     }
 }
