@@ -23,7 +23,7 @@ public class FileParser {
         BufferedReader bf = filereader.createReader();
         String line = null;
         while ((line = filereader.readFile(bf)) !=null){
-            if (!filereader.isComment(line) &&!filereader.isNewLine(line)){
+            if (!filereader.isComment(line) &&!filereader.invalid(line)){
                  String[] arr = line.trim().split(filereader.delimetier(" - "));
                 record.addnewKeyValue(ceateKeyValue(arr));
 
@@ -70,6 +70,10 @@ public class FileParser {
 
         public boolean isNewLine(String lineToRead) {
             return lineToRead.trim().startsWith("//");
+        }
+
+        public boolean invalid(String lineToRead) {
+            return lineToRead.trim().startsWith("/");
         }
 
         public String delimetier(String delimeter) {

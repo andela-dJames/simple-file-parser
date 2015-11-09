@@ -16,11 +16,54 @@ public class Record {
         record.add(kv);
     }
 
-    public void getKeyValue() {
+    public KeyValue getKeyValue() {
+        KeyValue keyValue;
         for (KeyValue kv: record){
-            System.out.println(kv.getKey() + " " + kv.getValue());
+            record.remove(kv);
+          return keyValue = kv;
         }
+    return null;
     }
 
+    public ArrayList<KeyValue> getRecord() {
+        return record;
+    }
 
+    public void setRecord(ArrayList<KeyValue> record) {
+        this.record = record;
+    }
+
+    public int size() {
+        return record.size();
+    }
+
+    public boolean contain(KeyValue kv) {
+        return record.contains(kv);
+    }
+
+    public boolean isEmpty() {
+        return record.isEmpty();
+    }
+
+    public void clear() {
+        record.clear();
+    }
+    public String getKeys() {
+        StringBuilder keys = new StringBuilder();
+        for (KeyValue kv : record){
+            keys.append("`")
+                    .append(kv.getKey())
+                    .append("`, ");
+        }
+        return keys.toString();
+    }
+    public String getValues() {
+        StringBuilder keys = new StringBuilder();
+        for (KeyValue kv : record){
+            keys.append("'")
+                    .append(kv.getValue())
+                    .append("', ");
+        }
+        return keys.toString();
+    }
 }

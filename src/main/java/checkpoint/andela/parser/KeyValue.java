@@ -1,15 +1,21 @@
 package checkpoint.andela.parser;
 
-import java.io.Serializable;
-import java.util.ArrayList;
-
 /**
- * Created by Oluwatosin on 11/5/2015.
+ * Represents a Key-value pair
  */
-public class KeyValue implements Serializable {
+public class KeyValue {
+    /**
+     * A key
+     */
     private String key;
+    /**
+     * A value of the key
+     */
     private String value;
 
+    /**
+     * creates a new keyValue
+     */
     public KeyValue() {
     }
 

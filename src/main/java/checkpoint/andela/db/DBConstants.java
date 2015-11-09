@@ -5,12 +5,13 @@ package checkpoint.andela.db;
  */
 public abstract class DBConstants {
 
-    public String SERVER_NAME = "";
-    public String USER_NAME = "";
-    public String DBMS = "";
-    public String PORT_NUMBER = "";
-    public String DB_NAME = "";
-    public String TABLE_NAME = "";
+    public static final String SERVER_NAME = "localhost";
+    public static final String USER_NAME = "root";
+    public static final String DBMS = "mysql";
+    public static final String PORT_NUMBER = "3306";
+    public static final String DB_NAME = "reactiondb";
+    public static final String TABLE_NAME = "reactions";
+    public static final String PASSWORD = "trojan**##";
 
 
 
