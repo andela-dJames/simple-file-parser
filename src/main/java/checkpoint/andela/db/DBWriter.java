@@ -1,6 +1,7 @@
 package checkpoint.andela.db;
 
 import checkpoint.andela.parser.KeyValue;
+import checkpoint.andela.parser.Record;
 
 import java.beans.Statement;
 import java.sql.Connection;
@@ -27,19 +28,19 @@ public class DBWriter {
         return properties;
     }
 
-    public String buildInsertString(KeyValue keyValue, String table) {
+    public String buildInsertString(Record record, String table) {
         StringBuilder insertString = new StringBuilder();
         insertString.append("Insert into ")
                     .append(table)
-                    .append("(`")
-                    .append(keyValue.getKey())
-                    .append("`) Values('")
-                    .append(keyValue.getValue())
+                    .append("(")
+                    .append(record.getKeys())
+                    .append(") Values('")
+                    .append(record.getValues())
                     .append("');");
 
         return insertString.toString();
     }
-    public String insert(KeyValue kv, String into) {
-        return buildInsertString(kv, into);
+    public String insertquery(Record rec, String into) {
+        return buildInsertString(rec, into);
     }
 }

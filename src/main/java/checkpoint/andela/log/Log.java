@@ -3,6 +3,7 @@ package checkpoint.andela.log;
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
 
+import java.io.BufferedOutputStream;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -29,35 +30,37 @@ public class Log {
     private BufferedWriter bufferedWriter;
 
     /**
-     * Creates a new log with the given parameters
+     * Creates a new log with the given parameter
      * @param taskName the name of the task
-     * @param dateTime the time of the execution
-     * @param message the message to log
      */
-    public Log(String taskName, DateTime dateTime, String message) {
+    public Log(String taskName) {
         TASK = taskName;
-        this.dateTime = dateTime;
-        this.message = message;
     }
-
-    public Log(String file, String taskName, String message) throws IOException {
-        this(taskName, DateTime.now(), message);
-         bufferedWriter = new BufferedWriter(new FileWriter(file));
-    }
+    //    public Log(String taskName, DateTime dateTime, String message) {
+//        TASK = taskName;
+//        this.dateTime = dateTime;
+//        this.message = message;
+//    }
+//
+//    public Log(String file, String taskName, String message) throws IOException {
+//        this(taskName, DateTime.now(), message);
+//         bufferedWriter = new BufferedWriter(new FileWriter(file));
+//    }
 
     /**
      * Builds the log
      * @return the content of the log
      */
-    public String log() {
-        return TASK + " " + message + " " + dateTime.toString(DateTimeFormat.forPattern("yyyy-MM-dd HH:mm:ss"));
+    public String log(String message) {
+       return TASK + " "+ message;
     }
 
     /**
      * writes the log to a file
      * @throws IOException
      */
-    public void write () throws IOException {
+    public void write (String fileName) throws IOException {
+        bufferedWriter = new BufferedWriter(new FileWriter(fileName));
         bufferedWriter.write(log());
     }
 }
