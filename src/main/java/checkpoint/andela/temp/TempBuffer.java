@@ -63,7 +63,7 @@ public class TempBuffer <E> {
         return buffer.contains(ob);
     }
 
-    public boolean isEmpt() {
+    public boolean isEmpty() {
         return buffer.isEmpty();
     }
 

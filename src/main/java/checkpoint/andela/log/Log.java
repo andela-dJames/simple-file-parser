@@ -1,12 +1,9 @@
 package checkpoint.andela.log;
 
 import org.joda.time.DateTime;
-import org.joda.time.format.DateTimeFormat;
 
-import java.io.BufferedOutputStream;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
+import java.nio.file.StandardOpenOption;
 
 /**
  * A class for logging events
@@ -27,7 +24,7 @@ public class Log {
     /**
      * A bufferedwriter
      */
-    private BufferedWriter bufferedWriter;
+    private BufferedWriter bufferedWriter = null;
 
     /**
      * Creates a new log with the given parameter
@@ -36,31 +33,47 @@ public class Log {
     public Log(String taskName) {
         TASK = taskName;
     }
-    //    public Log(String taskName, DateTime dateTime, String message) {
-//        TASK = taskName;
-//        this.dateTime = dateTime;
-//        this.message = message;
-//    }
-//
-//    public Log(String file, String taskName, String message) throws IOException {
-//        this(taskName, DateTime.now(), message);
-//         bufferedWriter = new BufferedWriter(new FileWriter(file));
-//    }
-
     /**
      * Builds the log
      * @return the content of the log
      */
     public String log(String message) {
-       return TASK + " "+ message;
+        dateTime = DateTime.now();
+       return TASK + "--"+ dateTime + "--" +message;
     }
 
     /**
-     * writes the log to a file
+     * writes the log to a file with the given parameters
+     *  @param fileName the name of the file to be written to
+     * @param mesg the message to log
      * @throws IOException
      */
-    public void write (String fileName) throws IOException {
-        bufferedWriter = new BufferedWriter(new FileWriter(fileName));
-        bufferedWriter.write(log());
+    public void write (String fileName, String mesg) throws IOException {
+        mesg = log(mesg);
+        BufferedWriter bw = null;
+        try {
+
+
+            FileWriter fw = new FileWriter(fileName, true);
+            bw = new BufferedWriter(fw);
+            PrintWriter pw = new PrintWriter(bw);
+            pw.println();
+            pw.println(mesg);
+
+
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+        }
+        finally
+        {
+            try{
+                if(bw!=null)
+                    bw.close();
+            }catch(Exception ex){
+
+            }
+        }
     }
 }
+
+

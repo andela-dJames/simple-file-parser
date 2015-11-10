@@ -3,7 +3,7 @@ package checkpoint.andela.parser;
 import java.util.ArrayList;
 
 /**
- * Created by Oluwatosin on 11/5/2015.
+ *
  */
 public class Record {
     private ArrayList<KeyValue> record;
@@ -53,17 +53,19 @@ public class Record {
         for (KeyValue kv : record){
             keys.append("`")
                     .append(kv.getKey())
-                    .append("`, ");
+                    .append("`,");
         }
+        keys.deleteCharAt(keys.length()-1);
         return keys.toString();
     }
     public String getValues() {
-        StringBuilder keys = new StringBuilder();
+        StringBuilder values = new StringBuilder();
         for (KeyValue kv : record){
-            keys.append("'")
+            values.append("'")
                     .append(kv.getValue())
-                    .append("', ");
+                    .append("',");
         }
-        return keys.toString();
+        values.deleteCharAt(values.length()-1);
+        return values.toString();
     }
 }

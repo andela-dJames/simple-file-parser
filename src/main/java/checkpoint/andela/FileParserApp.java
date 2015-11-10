@@ -2,6 +2,7 @@ package checkpoint.andela;
 
 import checkpoint.andela.db.DBConstants;
 import checkpoint.andela.db.DBWriter;
+import checkpoint.andela.log.Log;
 import checkpoint.andela.parser.FileParser;
 import checkpoint.andela.parser.KeyValue;
 import checkpoint.andela.parser.Record;
@@ -22,32 +23,23 @@ public class FileParserApp {
     private TempBuffer fileBuffer;
     private Record record;
     private Record bufferRecord;
+    private Log logWriter;
+    private boolean reading;
+    private boolean writing;
 
     public void executeThreads() {
-        ExecutorService producer = Executors.newFixedThreadPool(1);
+        ExecutorService producer = Executors.newFixedThreadPool(3);
         producer.execute(new Runnable() {
             @Override
             public void run() {
-                readFileToBuffer();
-            }
-        });
-        ExecutorService bufferexec = Executors.newFixedThreadPool(1);
-        producer.execute(new Runnable() {
-            @Override
-            public void run() {
-                readFileToBuffer();
-            }
-        });
-        ExecutorService consumer = Executors.newFixedThreadPool(1);
-        producer.execute(new Runnable() {
-            @Override
-            public void run() {
-                readFileToBuffer();
+                writeToBuffer();
+
             }
         });
 
+
     }
-    public void readFileToBuffer() {
+    public void readFile() {
         FileParser fileParser = new FileParser(fileName);
         try {
             record = fileParser.parseFile();
@@ -59,17 +51,18 @@ public class FileParserApp {
 
     public void readFromBuffer() {
 
-
     }
 
     public void writeToBuffer(){
+        readFile();
+        setWriting(true);
         Record rec = new Record();
         while (!record.isEmpty()) {
             KeyValue kv = record.getKeyValue();
             //rec.addnewKeyValue(kv);
             if (kv.getKey().startsWith("UNIQUE-ID")) {
                 try {
-                    if (fileBuffer.isEmpt())
+                    if (fileBuffer.isEmpty())
                     fileBuffer.insert(rec);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
@@ -101,4 +94,20 @@ public class FileParserApp {
 
     }
 
+    public synchronized boolean reading() {
+        return reading;
+    }
+
+    public synchronized boolean writing() {
+        return writing;
+    }
+
+    public void setReading(boolean reading) {
+        this.reading = reading;
+    }
+
+
+    public void setWriting(boolean writing) {
+        this.writing = writing;
+    }
 }
