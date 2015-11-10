@@ -46,9 +46,11 @@ public class FileParser {
             }
 
             rec.addnewKeyValue(kv);
+
         }while (!record.isEmpty());
 
         records.remove(0);
+
        return records;
     }
 
@@ -58,17 +60,26 @@ public class FileParser {
      * @throws IOException
      */
     public Record parseFile() throws IOException {
+
         Record record =new Record();
+
         BufferedReader bf = filereader.createReader();
+
         String line = null;
+
         while ((line = filereader.readFile(bf)) !=null){
+
             if (!filereader.isComment(line) &&!filereader.isNewLine(line) && !filereader.invalid(line)){
+
                  String[] arr = line.trim().split(filereader.delimetier(" - "));
+
                 record.addnewKeyValue(ceateKeyValue(arr));
 
             }
         }
+
     return record;
+
     }
 
     /**
@@ -77,11 +88,17 @@ public class FileParser {
      * @return
      */
     private KeyValue ceateKeyValue(String[] arr) {
+
         KeyValue kv = new KeyValue();
+
         for (int i = 0; i < arr.length-1; i++) {
+
             kv.setKey(arr[i]);
+
             kv.setValue(arr[i + 1]);
+
             }
+
         return kv;
     }
 

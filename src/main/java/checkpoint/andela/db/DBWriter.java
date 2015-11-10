@@ -1,9 +1,7 @@
 package checkpoint.andela.db;
 
-import checkpoint.andela.parser.KeyValue;
 import checkpoint.andela.parser.Record;
 
-import java.beans.Statement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -33,7 +31,9 @@ public class DBWriter {
      */
     public Connection connectToDB(String dbms, String serverName, String portno, String db, String username, String password ) throws SQLException {
         Connection connection = null;
+
         connection = DriverManager.getConnection("jdbc:"+ dbms + "://" + serverName + ":" + portno + "/" + db, buildPropperties(username, password) );
+
         return connection;
     }
 
@@ -57,7 +57,9 @@ public class DBWriter {
      * @return the
      */
     public String buildInsertString(Record record, String table) {
+
         StringBuilder insertString = new StringBuilder();
+
         insertString.append("Insert into ")
                     .append(table)
                     .append("(")
