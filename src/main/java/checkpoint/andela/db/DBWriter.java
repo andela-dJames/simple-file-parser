@@ -56,7 +56,7 @@ public class DBWriter {
      * @param table the table to inser into
      * @return the
      */
-    public String buildInsertString(Record record, String table) {
+    private String buildInsertString(Record record, String table) {
 
         StringBuilder insertString = new StringBuilder();
 

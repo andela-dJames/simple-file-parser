@@ -4,76 +4,73 @@ import checkpoint.andela.db.DBConstants;
 import checkpoint.andela.db.DBWriter;
 import checkpoint.andela.log.Log;
 import checkpoint.andela.parser.FileParser;
-import checkpoint.andela.parser.KeyValue;
 import checkpoint.andela.parser.Record;
 import checkpoint.andela.temp.TempBuffer;
+import org.joda.time.DateTime;
 
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by Oluwatosin on 11/7/2015.
  */
 public class FileParserApp {
-    private String fileName;
-    private TempBuffer fileBuffer;
-    private Record record;
-    private Record bufferRecord;
+    private static String fileName;
+    private static TempBuffer<Record> fileBuffer;
+    private static TempBuffer<String> logBuffer;
+    private static Record record;
     private Log logWriter;
     private boolean reading;
     private boolean writing;
-
-    public void executeThreads() {
-        ExecutorService producer = Executors.newFixedThreadPool(3);
-        producer.execute(new Runnable() {
-            @Override
-            public void run() {
-                writeToBuffer();
-
-            }
-        });
-
-
+    private static ArrayList<Record> records;
+    private static String logfile;
+    public FileParserApp() {
+        fileName = "reactions.dat";
+        record = new Record();
+        logWriter = new Log("File Parser" );
+        fileBuffer = new TempBuffer(1224);
+        logBuffer = new TempBuffer<>(1224);
+        records = new ArrayList<Record>();
+        logfile = "log.txt";
     }
-    public void readFile() {
+
+    public  void producer() throws IOException, InterruptedException {
+        setReading(true);
         FileParser fileParser = new FileParser(fileName);
-        try {
-            record = fileParser.parseFile();
-        } catch (IOException e) {
-            e.printStackTrace();
+        record = fileParser.parseFile();
+        records = fileParser.parse(record);
+        while(!records.isEmpty()){
+        for (Record record: records) {
+            fileBuffer.insert(record);
+            Log log = new Log("fileParser");
+            String messageToLog = "wrote " + record.uniqueID() + " to Buffer";
+            logBuffer.insert(log.write(""));
+            //records.remove(record);
+            System.out.print(fileBuffer.capacity());
+        }
+            records.clear();
+            setReading(false);
         }
 
     }
 
-    public void readFromBuffer() {
-
-    }
-
-    public void writeToBuffer(){
-        readFile();
-        setWriting(true);
-        Record rec = new Record();
-        while (!record.isEmpty()) {
-            KeyValue kv = record.getKeyValue();
-            //rec.addnewKeyValue(kv);
-            if (kv.getKey().startsWith("UNIQUE-ID")) {
-                try {
-                    if (fileBuffer.isEmpty())
-                    fileBuffer.insert(rec);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                rec.clear();
-            }
-            rec.addnewKeyValue(kv);
+    public void logwriter() throws InterruptedException, IOException {
+        while (reading || !fileBuffer.isEmpty()) {
+            String log = logBuffer.Remove();
+            Log.write(logfile, log);
         }
+
     }
 
-    public void writeToDB() {
+    public static void consumer () throws SQLException, InterruptedException {
+        Record record = new Record();
+        record = fileBuffer.Remove();
         String dbms = DBConstants.DBMS;
         String serverName = DBConstants.SERVER_NAME;
         String portno = DBConstants.PORT_NUMBER;
@@ -81,18 +78,20 @@ public class FileParserApp {
         String tableName = DBConstants.TABLE_NAME;
         String username = DBConstants.USER_NAME;
         String password = DBConstants.PASSWORD;
-        DBWriter dbWriter = new DBWriter();
-        Statement stmt = null;
+         Statement stmt = null;
         Connection con = null;
-        try {
-            con = dbWriter.connectToDB(dbms, serverName,portno, db, username, password);
-            stmt = con.createStatement();
-            stmt.executeUpdate(dbWriter.insertquery(bufferRecord, tableName));
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        String messageToLog ="wrote ";
+        DBWriter dbWriter = new DBWriter();
+        con = dbWriter.connectToDB(dbms, serverName,portno, db, username, password);
+        stmt = con.createStatement();
+        stmt.executeUpdate(dbWriter.insertquery(record,tableName ));
+        Log log = new Log(dbWriter.getClass().toString());
+        messageToLog += record.uniqueID() + " to Buffer";
+        logBuffer.insert(log.write(""));
+        System.out.print(con.isValid(2));
 
     }
+
 
     public synchronized boolean reading() {
         return reading;

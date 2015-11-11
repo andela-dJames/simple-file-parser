@@ -4,15 +4,21 @@ import junit.framework.TestCase;
 import org.junit.Test;
 
 /**
- * Created by Oluwatosin on 11/6/2015.
+ * A Test for Record class.
  */
 public class RecordTest extends TestCase {
-    KeyValue kv = new KeyValue();
+    KeyValue kv = new KeyValue("UNIQUE-ID", "PPGPPSYN-RXN");
     Record record = new Record();
 
     @Override
     public void setUp() throws Exception {
-        record.addnewKeyValue(kv);
+        KeyValue kv2 = new KeyValue("TYPES ", "Small-Molecule-Reactions");
+        KeyValue kv3 = new KeyValue("TYPES ", "Small-Molecule-Reactions");
+        KeyValue kv4 = new KeyValue("TYPES ", "Small-Molecule-Reactions");
+        KeyValue kv5 = new KeyValue("TYPES ", "Small-Molecule-Reactions");
+        KeyValue kv6 = new KeyValue("TYPES ", "Small-Molecule-Reactions");
+
+        record.addnewKeyValue(kv, kv2, kv3, kv4, kv5, kv6);
     }
     @Test
     public void testAddnewKeyValue() throws Exception {
@@ -25,5 +31,11 @@ public class RecordTest extends TestCase {
     @Test
     public void testSize() throws Exception {
         assertEquals(1, record.size());
+    }
+    @Test
+    public void testUniqueID() {
+        String id = record.uniqueID();
+        assertEquals(id, "UNIQUE-ID: PPGPPSYN-RXN" );
+
     }
 }

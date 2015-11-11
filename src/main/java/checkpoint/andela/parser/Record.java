@@ -15,6 +15,12 @@ public class Record {
     public void addnewKeyValue(KeyValue kv) {
         record.add(kv);
     }
+    public void addnewKeyValue(KeyValue... kv) {
+        for (KeyValue k : kv){
+            record.add(k);
+        }
+
+    }
 
     public KeyValue getKeyValue() {
         KeyValue keyValue;
@@ -55,7 +61,7 @@ public class Record {
                     .append(kv.getKey())
                     .append("`,");
         }
-        keys.deleteCharAt(keys.length()-1);
+        keys.deleteCharAt(keys.length() - 1);
         return keys.toString();
     }
     public String getValues() {
@@ -65,7 +71,17 @@ public class Record {
                     .append(kv.getValue())
                     .append("',");
         }
-        values.deleteCharAt(values.length()-1);
+        values.deleteCharAt(values.length() - 1);
         return values.toString();
+    }
+
+    public String uniqueID() {
+        String id = "";
+        for (KeyValue kv: record){
+            if (kv.getKey().equals("UNIQUE-ID")){
+                id+=kv.getKey() + ": " + kv.getValue();
+            }
+        }
+        return id;
     }
 }

@@ -7,7 +7,7 @@ import java.util.ArrayList;
 /**
  * A file parser class for reading and parsing a file.
  */
-public class FileParser {
+public class FileParser implements Runnable{
     /**
      * A Filereader.
      */
@@ -33,7 +33,7 @@ public class FileParser {
      */
     public ArrayList<Record> parse(Record record) {
 
-        Record rec = null;
+        Record rec = new Record();
 
         ArrayList<Record> records = new ArrayList<>();
 
@@ -100,6 +100,11 @@ public class FileParser {
             }
 
         return kv;
+    }
+
+    @Override
+    public void run() {
+
     }
 
     /**
