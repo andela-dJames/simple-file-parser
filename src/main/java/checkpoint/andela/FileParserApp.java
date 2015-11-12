@@ -64,6 +64,7 @@ public class FileParserApp {
         reading = true;
         writing = true;
     }
+
     /**
      * parses a given file and stores them in a buffer
      * it also writes a log to a buffer
@@ -113,8 +114,8 @@ public class FileParserApp {
         Record record = new Record();
 
         String dbms = DBConstants.DBMS;
-        String serverName = System.getenv(DBConstants.SERVER_NAME);
-        String portno = System.getenv(DBConstants.PORT_NUMBER);
+        String serverName = DBConstants.SERVER_NAME;
+        String portno = DBConstants.PORT_NUMBER;
         String db = DBConstants.DB_NAME;
         String tableName = DBConstants.TABLE_NAME;
         String username = System.getenv(DBConstants.USER_NAME);
