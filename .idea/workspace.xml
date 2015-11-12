@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94fbf3a5-49ff-4538-b34f-26b873567715" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/checkpoint/andela/parser/FileParserTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fileparsertest.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/checkpoint/andela/db/DBWriter.java" afterPath="$PROJECT_DIR$/src/main/java/checkpoint/andela/db/DBWriter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/checkpoint/andela/parser/FileParser.java" afterPath="$PROJECT_DIR$/src/main/java/checkpoint/andela/parser/FileParser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/checkpoint/andela/FileParserApp.java" afterPath="$PROJECT_DIR$/src/main/java/checkpoint/andela/FileParserApp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/checkpoint/andela/parser/KeyValue.java" afterPath="$PROJECT_DIR$/src/main/java/checkpoint/andela/parser/KeyValue.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/checkpoint/andela/log/Log.java" afterPath="$PROJECT_DIR$/src/main/java/checkpoint/andela/log/Log.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/checkpoint/andela/Main.java" afterPath="$PROJECT_DIR$/src/main/java/checkpoint/andela/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/checkpoint/andela/parser/Record.java" afterPath="$PROJECT_DIR$/src/main/java/checkpoint/andela/parser/Record.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/checkpoint/andela/parser/RecordTest.java" afterPath="$PROJECT_DIR$/src/test/java/checkpoint/andela/parser/RecordTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log.txt" afterPath="$PROJECT_DIR$/log.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="simple-file-parser.iws" />
@@ -76,33 +71,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/checkpoint/andela/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileParserApp.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/checkpoint/andela/FileParserApp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.1958042">
-              <caret line="63" column="50" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="50" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3279#3280#0" expanded="true" />
-                <element signature="e#3309#3310#0" expanded="true" />
-                <element signature="e#3354#3355#0" expanded="true" />
-                <element signature="e#3384#3385#0" expanded="true" />
-                <element signature="e#3431#3432#0" expanded="true" />
-                <element signature="e#3469#3470#0" expanded="true" />
-                <element signature="e#3517#3518#0" expanded="true" />
-                <element signature="e#3555#3556#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -112,7 +87,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/checkpoint/andela/parser/FileParser.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -130,55 +105,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reactions" pinned="false" current-in-tab="false">
-        <entry file="db://e26f9ce7-4b74-4a2c-819e-a06ec5453a1c/object#[schema/table][reactiondb/reactions]">
-          <provider selected="true" editor-type-id="1.DATA">
-            <state row-count="0" readonly="false">
-              <columns>
-                <column name="UNIQUE-ID" position="0" visible="true" />
-                <column name="TYPES" position="1" visible="true" />
-                <column name="COMMON-NAME" position="2" visible="true" />
-                <column name="ATOM-MAPPINGS" position="3" visible="true" />
-                <column name="CANNOT-BALANCE?" position="4" visible="true" />
-                <column name="CITATIONS" position="5" visible="true" />
-                <column name="COMMENT" position="6" visible="true" />
-                <column name="COMMENT-INTERNAL" position="7" visible="true" />
-                <column name="CREDITS" position="8" visible="true" />
-                <column name="DATA-SOURCE" position="9" visible="true" />
-                <column name="DBLINKS" position="10" visible="true" />
-                <column name="DELTAG0" position="11" visible="true" />
-                <column name="DOCUMENTATION" position="12" visible="true" />
-                <column name="EC-NUMBER" position="13" visible="true" />
-                <column name="ENZYMATIC-REACTION" position="14" visible="true" />
-                <column name="ENZYMES-NOT-USED" position="15" visible="true" />
-                <column name="EQUILIBRIUM-CONSTANT" position="16" visible="true" />
-                <column name="HIDE-SLOT?" position="17" visible="true" />
-                <column name="IN-PATHWAY" position="18" visible="true" />
-                <column name="INSTANCE-NAME-TEMPLATE" position="19" visible="true" />
-                <column name="LEFT" position="20" visible="true" />
-                <column name="MEMBER-SORT-FN" position="21" visible="true" />
-                <column name="ORPHAN?" position="22" visible="true" />
-                <column name="PATHOLOGIC-NAME-MATCHER-EVIDENCE" position="23" visible="true" />
-                <column name="PATHOLOGIC-PWY-EVIDENCE" position="24" visible="true" />
-                <column name="PHYSIOLOGICALLY-RELEVANT?" position="25" visible="true" />
-                <column name="PREDECESSORS" position="26" visible="true" />
-                <column name="PRIMARIES" position="27" visible="true" />
-                <column name="REACTION-DIRECTION" position="28" visible="true" />
-                <column name="REACTION-LIST" position="29" visible="true" />
-                <column name="REGULATED-BY" position="30" visible="true" />
-                <column name="REQUIREMENTS" position="31" visible="true" />
-                <column name="RIGHT" position="32" visible="true" />
-                <column name="RXN-LOCATIONS" position="33" visible="true" />
-                <column name="SIGNAL" position="34" visible="true" />
-                <column name="SPECIES" position="35" visible="true" />
-                <column name="SPONTANEOUS?" position="36" visible="true" />
-                <column name="STD-REDUCTION-POTENTIAL" position="37" visible="true" />
-                <column name="SYNONYMS" position="38" visible="true" />
-                <column name="SYSTEMATIC-NAME" position="39" visible="true" />
-                <column name="TEMPLATE-FILE" position="40" visible="true" />
-              </columns>
-              <sorting />
-              <content-types />
+      <file leaf-file-name="reactions.dat" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/reactions.dat">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="12075" column="24" selection-start-line="12075" selection-start-column="24" selection-end-line="12075" selection-end-column="24" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -197,27 +129,9 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/checkpoint/andela/log/Log.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="30" column="18" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding>
-                <element signature="e#1169#1170#0" expanded="true" />
-                <element signature="e#1202#1203#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Record.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/checkpoint/andela/parser/Record.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="81" column="37" selection-start-line="81" selection-start-column="37" selection-end-line="81" selection-end-column="37" />
-              <folding>
-                <element signature="e#158#159#0" expanded="true" />
-                <element signature="e#208#209#0" expanded="true" />
-                <element signature="e#255#256#0" expanded="true" />
-                <element signature="e#285#286#0" expanded="true" />
-                <element signature="e#650#651#0" expanded="true" />
-                <element signature="e#679#680#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -227,7 +141,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/checkpoint/andela/db/DBWriter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+              <caret line="67" column="47" selection-start-line="67" selection-start-column="47" selection-end-line="67" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -239,7 +153,17 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/checkpoint/andela/parser/RecordTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+              <caret line="9" column="60" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileParserApp.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/checkpoint/andela/FileParserApp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -474,14 +398,14 @@
         <option value="$PROJECT_DIR$/src/main/java/checkpoint/andela/temp/TempBuffer.java" />
         <option value="$PROJECT_DIR$/fileparsertest.txt" />
         <option value="$PROJECT_DIR$/src/test/java/checkpoint/andela/parser/FileParserTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/checkpoint/andela/db/DBWriter.java" />
         <option value="$PROJECT_DIR$/src/main/java/checkpoint/andela/parser/FileParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/checkpoint/andela/parser/KeyValue.java" />
         <option value="$PROJECT_DIR$/src/main/java/checkpoint/andela/parser/Record.java" />
         <option value="$PROJECT_DIR$/src/test/java/checkpoint/andela/parser/RecordTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/checkpoint/andela/db/DBConstants.java" />
-        <option value="$PROJECT_DIR$/src/main/java/checkpoint/andela/log/Log.java" />
+        <option value="$PROJECT_DIR$/src/main/java/checkpoint/andela/db/DBWriter.java" />
         <option value="$PROJECT_DIR$/log.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/checkpoint/andela/log/Log.java" />
         <option value="$PROJECT_DIR$/src/main/java/checkpoint/andela/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/checkpoint/andela/FileParserApp.java" />
       </list>
@@ -526,6 +450,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -546,9 +472,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -932,15 +856,12 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32937685" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33333334" sideWeight="0.50296736" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27113238" sideWeight="0.49703264" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32937685" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16468842" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -949,12 +870,15 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39872408" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39872408" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27113238" sideWeight="0.49703264" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32937685" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -1009,6 +933,14 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/checkpoint/andela/FileParserApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="95" column="24" selection-start-line="95" selection-start-column="24" selection-end-line="95" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/checkpoint/andela/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1023,7 +955,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1039,17 +970,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3279#3280#0" expanded="true" />
-            <element signature="e#3309#3310#0" expanded="true" />
-            <element signature="e#3354#3355#0" expanded="true" />
-            <element signature="e#3384#3385#0" expanded="true" />
-            <element signature="e#3431#3432#0" expanded="true" />
-            <element signature="e#3469#3470#0" expanded="true" />
-            <element signature="e#3517#3518#0" expanded="true" />
-            <element signature="e#3555#3556#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1058,12 +979,16 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="56" column="9" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
           <folding>
-            <element signature="e#158#159#0" expanded="true" />
-            <element signature="e#208#209#0" expanded="true" />
-            <element signature="e#255#256#0" expanded="true" />
-            <element signature="e#285#286#0" expanded="true" />
-            <element signature="e#650#651#0" expanded="true" />
-            <element signature="e#679#680#0" expanded="true" />
+            <element signature="e#736#737#0" expanded="false" />
+            <element signature="e#772#773#0" expanded="false" />
+            <element signature="e#797#798#0" expanded="false" />
+            <element signature="e#833#834#0" expanded="false" />
+            <element signature="e#876#877#0" expanded="false" />
+            <element signature="e#918#919#0" expanded="false" />
+            <element signature="e#950#951#0" expanded="false" />
+            <element signature="e#989#990#0" expanded="false" />
+            <element signature="e#1016#1017#0" expanded="false" />
+            <element signature="e#1046#1047#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1082,7 +1007,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="46" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1100,7 +1027,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1108,7 +1034,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1116,7 +1044,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1132,7 +1059,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="60" column="27" selection-start-line="60" selection-start-column="27" selection-end-line="60" selection-end-column="27" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1151,7 +1078,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1159,7 +1085,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="26" column="46" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1168,12 +1096,16 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding>
-            <element signature="e#158#159#0" expanded="true" />
-            <element signature="e#208#209#0" expanded="true" />
-            <element signature="e#255#256#0" expanded="true" />
-            <element signature="e#285#286#0" expanded="true" />
-            <element signature="e#650#651#0" expanded="true" />
-            <element signature="e#679#680#0" expanded="true" />
+            <element signature="e#736#737#0" expanded="false" />
+            <element signature="e#772#773#0" expanded="false" />
+            <element signature="e#797#798#0" expanded="false" />
+            <element signature="e#833#834#0" expanded="false" />
+            <element signature="e#876#877#0" expanded="false" />
+            <element signature="e#918#919#0" expanded="false" />
+            <element signature="e#950#951#0" expanded="false" />
+            <element signature="e#989#990#0" expanded="false" />
+            <element signature="e#1016#1017#0" expanded="false" />
+            <element signature="e#1046#1047#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1182,7 +1114,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1199,7 +1130,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1218,7 +1149,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1226,7 +1156,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1235,12 +1167,16 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
           <folding>
-            <element signature="e#158#159#0" expanded="true" />
-            <element signature="e#208#209#0" expanded="true" />
-            <element signature="e#255#256#0" expanded="true" />
-            <element signature="e#285#286#0" expanded="true" />
-            <element signature="e#650#651#0" expanded="true" />
-            <element signature="e#679#680#0" expanded="true" />
+            <element signature="e#736#737#0" expanded="false" />
+            <element signature="e#772#773#0" expanded="false" />
+            <element signature="e#797#798#0" expanded="false" />
+            <element signature="e#833#834#0" expanded="false" />
+            <element signature="e#876#877#0" expanded="false" />
+            <element signature="e#918#919#0" expanded="false" />
+            <element signature="e#950#951#0" expanded="false" />
+            <element signature="e#989#990#0" expanded="false" />
+            <element signature="e#1016#1017#0" expanded="false" />
+            <element signature="e#1046#1047#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1249,7 +1185,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1275,7 +1210,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1283,7 +1217,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="40" column="43" selection-start-line="40" selection-start-column="43" selection-end-line="40" selection-end-column="43" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1320,7 +1256,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1328,7 +1263,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1336,7 +1270,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1344,9 +1277,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.60267115">
           <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1354,7 +1284,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14190318">
           <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1362,7 +1291,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1370,15 +1298,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="21" column="47" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reactions.dat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="220" column="26" selection-start-line="220" selection-start-column="0" selection-end-line="220" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1387,12 +1306,16 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="81" column="37" selection-start-line="81" selection-start-column="37" selection-end-line="81" selection-end-column="37" />
           <folding>
-            <element signature="e#158#159#0" expanded="true" />
-            <element signature="e#208#209#0" expanded="true" />
-            <element signature="e#255#256#0" expanded="true" />
-            <element signature="e#285#286#0" expanded="true" />
-            <element signature="e#650#651#0" expanded="true" />
-            <element signature="e#679#680#0" expanded="true" />
+            <element signature="e#736#737#0" expanded="false" />
+            <element signature="e#772#773#0" expanded="false" />
+            <element signature="e#797#798#0" expanded="false" />
+            <element signature="e#833#834#0" expanded="false" />
+            <element signature="e#876#877#0" expanded="false" />
+            <element signature="e#918#919#0" expanded="false" />
+            <element signature="e#950#951#0" expanded="false" />
+            <element signature="e#989#990#0" expanded="false" />
+            <element signature="e#1016#1017#0" expanded="false" />
+            <element signature="e#1046#1047#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1400,85 +1323,25 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/checkpoint/andela/parser/RecordTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+          <caret line="9" column="60" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="60" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/checkpoint/andela/db/DBConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="db://e26f9ce7-4b74-4a2c-819e-a06ec5453a1c/object#[schema/table][reactiondb/reactions]">
-      <provider selected="true" editor-type-id="1.DATA">
-        <state row-count="0" readonly="false">
-          <columns>
-            <column name="UNIQUE-ID" position="0" visible="true" />
-            <column name="TYPES" position="1" visible="true" />
-            <column name="COMMON-NAME" position="2" visible="true" />
-            <column name="ATOM-MAPPINGS" position="3" visible="true" />
-            <column name="CANNOT-BALANCE?" position="4" visible="true" />
-            <column name="CITATIONS" position="5" visible="true" />
-            <column name="COMMENT" position="6" visible="true" />
-            <column name="COMMENT-INTERNAL" position="7" visible="true" />
-            <column name="CREDITS" position="8" visible="true" />
-            <column name="DATA-SOURCE" position="9" visible="true" />
-            <column name="DBLINKS" position="10" visible="true" />
-            <column name="DELTAG0" position="11" visible="true" />
-            <column name="DOCUMENTATION" position="12" visible="true" />
-            <column name="EC-NUMBER" position="13" visible="true" />
-            <column name="ENZYMATIC-REACTION" position="14" visible="true" />
-            <column name="ENZYMES-NOT-USED" position="15" visible="true" />
-            <column name="EQUILIBRIUM-CONSTANT" position="16" visible="true" />
-            <column name="HIDE-SLOT?" position="17" visible="true" />
-            <column name="IN-PATHWAY" position="18" visible="true" />
-            <column name="INSTANCE-NAME-TEMPLATE" position="19" visible="true" />
-            <column name="LEFT" position="20" visible="true" />
-            <column name="MEMBER-SORT-FN" position="21" visible="true" />
-            <column name="ORPHAN?" position="22" visible="true" />
-            <column name="PATHOLOGIC-NAME-MATCHER-EVIDENCE" position="23" visible="true" />
-            <column name="PATHOLOGIC-PWY-EVIDENCE" position="24" visible="true" />
-            <column name="PHYSIOLOGICALLY-RELEVANT?" position="25" visible="true" />
-            <column name="PREDECESSORS" position="26" visible="true" />
-            <column name="PRIMARIES" position="27" visible="true" />
-            <column name="REACTION-DIRECTION" position="28" visible="true" />
-            <column name="REACTION-LIST" position="29" visible="true" />
-            <column name="REGULATED-BY" position="30" visible="true" />
-            <column name="REQUIREMENTS" position="31" visible="true" />
-            <column name="RIGHT" position="32" visible="true" />
-            <column name="RXN-LOCATIONS" position="33" visible="true" />
-            <column name="SIGNAL" position="34" visible="true" />
-            <column name="SPECIES" position="35" visible="true" />
-            <column name="SPONTANEOUS?" position="36" visible="true" />
-            <column name="STD-REDUCTION-POTENTIAL" position="37" visible="true" />
-            <column name="SYNONYMS" position="38" visible="true" />
-            <column name="SYSTEMATIC-NAME" position="39" visible="true" />
-            <column name="TEMPLATE-FILE" position="40" visible="true" />
-          </columns>
-          <sorting />
-          <content-types />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/checkpoint/andela/log/Log.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="18" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
-          <folding>
-            <element signature="e#1169#1170#0" expanded="true" />
-            <element signature="e#1202#1203#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/checkpoint/andela/db/DBWriter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <caret line="67" column="47" selection-start-line="67" selection-start-column="47" selection-end-line="67" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/checkpoint/andela/log/Log.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1488,7 +1351,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/checkpoint/andela/parser/FileParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1503,30 +1366,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/checkpoint/andela/Main.java">
+    <entry file="file://$PROJECT_DIR$/reactions.dat">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="12075" column="24" selection-start-line="12075" selection-start-column="24" selection-end-line="12075" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/checkpoint/andela/db/DBConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/checkpoint/andela/FileParserApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.1958042">
-          <caret line="63" column="50" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="50" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/checkpoint/andela/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3279#3280#0" expanded="true" />
-            <element signature="e#3309#3310#0" expanded="true" />
-            <element signature="e#3354#3355#0" expanded="true" />
-            <element signature="e#3384#3385#0" expanded="true" />
-            <element signature="e#3431#3432#0" expanded="true" />
-            <element signature="e#3469#3470#0" expanded="true" />
-            <element signature="e#3517#3518#0" expanded="true" />
-            <element signature="e#3555#3556#0" expanded="true" />
           </folding>
         </state>
       </provider>

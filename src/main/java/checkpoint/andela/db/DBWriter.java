@@ -64,9 +64,9 @@ public class DBWriter {
                     .append(table)
                     .append("(")
                     .append(record.getKeys())
-                    .append(") Values('")
+                    .append(") Values(")
                     .append(record.getValues())
-                    .append("');");
+                    .append(");");
 
         return insertString.toString();
     }
