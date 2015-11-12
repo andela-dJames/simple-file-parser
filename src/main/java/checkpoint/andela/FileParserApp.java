@@ -113,12 +113,12 @@ public class FileParserApp {
         Record record = new Record();
 
         String dbms = DBConstants.DBMS;
-        String serverName = DBConstants.SERVER_NAME;
-        String portno = DBConstants.PORT_NUMBER;
+        String serverName = System.getenv(DBConstants.SERVER_NAME);
+        String portno = System.getenv(DBConstants.PORT_NUMBER);
         String db = DBConstants.DB_NAME;
         String tableName = DBConstants.TABLE_NAME;
-        String username = DBConstants.USER_NAME;
-        String password = DBConstants.PASSWORD;
+        String username = System.getenv(DBConstants.USER_NAME);
+        String password = System.getenv(DBConstants.PASSWORD);
 
          Statement stmt = null;
         Connection con = null;
@@ -135,7 +135,7 @@ public class FileParserApp {
 
             Log log = new Log("DBwriter");
 
-            String messageToLog = "collected" + record.uniqueID() + " from Buffer";
+            String messageToLog = "collected " + record.uniqueID() + " from Buffer";
 
            logBuffer.insert(log.write(messageToLog));
         }
@@ -156,5 +156,8 @@ public class FileParserApp {
 
     public void setWriting(boolean writing) {
         this.writing = writing;
+    }
+    public static String rep( String line) {
+        return line.replace("'", "\\'");
     }
 }

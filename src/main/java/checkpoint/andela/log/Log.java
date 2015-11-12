@@ -41,10 +41,9 @@ public class Log {
      * @return the content of the log
      */
     private static String log(String message) {
-        dateTime = DateTime.now().toString(DateTimeFormat.forPattern("yyyy-MM-dd HH:mm:ss"));
+        dateTime = DateTime.now().toString(DateTimeFormat.forPattern("yyyy-MM-dd HH:mm"));
        return TASK + "--"+ dateTime + "--" +message;
     }
-   // moment.toString(DateTimeFormat.forPattern("yyyy-MM-dd HH:mm:ss")) + ")
 
     public String write( String message) {
       return log(message);
@@ -64,7 +63,6 @@ public class Log {
             FileWriter fw = new FileWriter(fileName, true);
             bw = new BufferedWriter(fw);
             PrintWriter pw = new PrintWriter(bw);
-            //pw.println();
             pw.println(mesg);
 
 

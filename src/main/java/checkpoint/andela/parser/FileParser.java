@@ -70,7 +70,8 @@ public class FileParser implements Runnable{
         while ((line = filereader.readFile(bf)) !=null){
 
             if (!filereader.isComment(line) &&!filereader.isNewLine(line) && !filereader.invalid(line)){
-
+                line = filereader.replace(line);
+                line = filereader.remove(line);
                  String[] arr = line.trim().split(filereader.delimetier(" - "));
 
                 record.addnewKeyValue(ceateKeyValue(arr));
@@ -118,6 +119,7 @@ public class FileParser implements Runnable{
 
         private BufferedReader bufferedReader;
 
+
         public Filereader(String file) {
 
             this.file = file;
@@ -129,8 +131,8 @@ public class FileParser implements Runnable{
          * @throws FileNotFoundException
          */
         public BufferedReader createReader() throws FileNotFoundException {
-
             return bufferedReader = new BufferedReader(new FileReader(file));
+
         }
         /**
          * reads the given file
@@ -142,7 +144,6 @@ public class FileParser implements Runnable{
             String line = null;
             return line = bufferedReader.readLine();
         }
-
         /**
          * checks if a line is a comment
          * @param lineToRead
@@ -178,5 +179,14 @@ public class FileParser implements Runnable{
         public String delimetier(String delimeter) {
             return delimeter;
         }
+        public  String replace( String line) {
+            return line.replace("'", "\\'");
+        }
+        public String remove(String line) {
+            return line.replace("CobA [ambiguous - ", "CobA [ambiguous-");
+        }
     }
+
+
+
 }

@@ -56,7 +56,7 @@ public class Record {
     }
     public String getKeys() {
         StringBuilder keys = new StringBuilder();
-        for (KeyValue kv : record){
+        for (KeyValue kv : fields()){
             keys.append("`")
                     .append(kv.getKey())
                     .append("`,");
@@ -64,15 +64,49 @@ public class Record {
         keys.deleteCharAt(keys.length() - 1);
         return keys.toString();
     }
+
     public String getValues() {
         StringBuilder values = new StringBuilder();
-        for (KeyValue kv : record){
-            values.append("'")
+        for (KeyValue kv : fields()){
+            if (kv.getValue().contains("\'")){
+            }
+            values.append("'\\")
                     .append(kv.getValue())
                     .append("',");
         }
         values.deleteCharAt(values.length() - 1);
         return values.toString();
+    }
+    public ArrayList<KeyValue> fields () {
+
+        ArrayList<KeyValue> fields = new ArrayList<>();
+        for (KeyValue kv: record){
+            if (!found(fields, kv.getKey())){
+                fields.add(kv);
+            }
+        }
+        return fields;
+    }
+
+    public ArrayList<KeyValue> rows(){
+        ArrayList<KeyValue> rows = new ArrayList<>();
+
+        for (KeyValue kv : record){
+            if (!found(rows, kv.getKey())){
+
+                rows.add(kv);
+            }
+        }
+        return rows;
+    }
+
+    public boolean found(ArrayList<KeyValue> kv, String identical) {
+        for (KeyValue k: kv){
+            if (k.getKey().equals(identical)){
+                return true;
+            }
+        }
+        return false;
     }
 
     public String uniqueID() {
