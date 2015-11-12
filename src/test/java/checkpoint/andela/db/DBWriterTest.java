@@ -6,7 +6,7 @@ import java.sql.Connection;
 import java.sql.Statement;
 
 /**
- * Created by Oluwatosin on 11/12/2015.
+ * Test for DBWRITER Class
  */
 public class DBWriterTest extends TestCase {
     String dbms = DBConstants.DBMS;
@@ -28,12 +28,16 @@ public class DBWriterTest extends TestCase {
 
 
     public void testConnectToDB() throws Exception {
+
         DBWriter dbWriter = new DBWriter();
+
         Class.forName(DBConstants.MYSQL_DRIVER);
+
         con = dbWriter.connectToDB(dbms, serverName, portno, db, username, password);
-//       stmt = con.createStatement();
+
        assertTrue(con.isValid(5));
-        System.out.print(serverName);
+
+
     }
 
     public void testBuildPropperties() throws Exception {

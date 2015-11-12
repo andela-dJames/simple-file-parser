@@ -1,8 +1,6 @@
 package checkpoint.andela.db;
 
-/**
- * Created by Oluwatosin on 11/6/2015.
- */
+
 public abstract class DBConstants {
 
     public static final String SERVER_NAME = "localhost";
