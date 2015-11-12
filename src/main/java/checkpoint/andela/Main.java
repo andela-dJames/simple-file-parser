@@ -1,13 +1,12 @@
 package checkpoint.andela;
 
-
 import java.io.*;
 import java.sql.SQLException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * Created by Oluwatosin on 11/5/2015.
+ * Runs the file parser Application using multithread.
  */
 public class Main {
     public static void main(String[] args) {

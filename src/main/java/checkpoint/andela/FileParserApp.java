@@ -14,23 +14,44 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 /**
- * Created by Oluwatosin on 11/7/2015.
+ * A file parser app class
  */
 public class FileParserApp {
-
+    /**
+     * the name or path of file to be read
+     */
     private static String fileName;
-
+    /**
+     * A buffer to storing the parsed file
+     */
     private static TempBuffer<Record> fileBuffer;
+    /**
+     * A buffer for storing logs
+     */
     private static TempBuffer<String> logBuffer;
-
+    /**
+     * A record of data
+     */
     private static Record record;
+    /**
+     * A log writer
+     */
     private Log logWriter;
 
     private static boolean reading;
     private boolean writing;
-
+    /**
+     * An arraylist of records
+     */
     private static ArrayList<Record> records;
+    /**
+     * A file for writing the log to
+     */
     private static String logfile;
+
+    /**
+     * creates a new file parser
+     */
     public FileParserApp() {
 
         fileName = "reactions.dat";
@@ -43,18 +64,12 @@ public class FileParserApp {
         reading = true;
         writing = true;
     }
-
-    public static void main(String[] args) {
-        try {
-            consumer();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-    }
-
+    /**
+     * parses a given file and stores them in a buffer
+     * it also writes a log to a buffer
+     * @throws IOException
+     * @throws InterruptedException
+     */
     public  void producer() throws IOException, InterruptedException {
         setReading(true);
         FileParser fileParser = new FileParser(fileName);
@@ -73,6 +88,11 @@ public class FileParserApp {
         setReading(false);
     }
 
+    /**
+     * writes the log from the buffer to a file.
+     * @throws InterruptedException
+     * @throws IOException
+     */
     public void logwriter() throws InterruptedException, IOException {
 
         while (reading || writing || !logBuffer.isEmpty()) {
@@ -84,6 +104,11 @@ public class FileParserApp {
 
     }
 
+    /**
+     * writes the record from the buffer to a database
+     * @throws SQLException
+     * @throws InterruptedException
+     */
     public static void consumer() throws SQLException, InterruptedException {
         Record record = new Record();
 
@@ -114,10 +139,8 @@ public class FileParserApp {
 
            logBuffer.insert(log.write(messageToLog));
         }
-        System.out.print(con.isValid(2));
 
     }
-
 
     public synchronized boolean reading() {
         return reading;
