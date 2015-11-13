@@ -97,7 +97,7 @@ Finally A main class was created with multiple threads that run all the activiti
 
 ##TEST
 
-test were written for the methods in the classes and are located in the src/test/java directory
+Test were written for the methods in the classes and are located in the src/test/java directory
 
 
 
