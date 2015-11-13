@@ -10,47 +10,7 @@ The data files generated from each PGDB fall into the following categories of fo
 To get more information on the format of the file, [visit PATHWAY TOOLS DATA-FILE FORMATS] (http://bioinformatics.ai.sri.com/ptools/flatfile-format.html)
 
 
->    UNIQUE-ID
->    TYPES
->    COMMON-NAME
->    ATOM-MAPPINGS
->    CANNOT-BALANCE?
->  CITATIONS
->   COMMENT
->    COMMENT-INTERNAL
->   CREDITS
->    DATA-SOURCE
->    DBLINKS
->    DELTAG0
->    DOCUMENTATION
->    EC-NUMBER
->    ENZYMATIC-REACTION
->    ENZYMES-NOT-USED
->    EQUILIBRIUM-CONSTANT
->    HIDE-SLOT?
->    IN-PATHWAY
->    INSTANCE-NAME-TEMPLATE
->    LEFT
->    MEMBER-SORT-FN
->    ORPHAN?
->    PATHOLOGIC-NAME-MATCHER-EVIDENCE
->    PATHOLOGIC-PWY-EVIDENCE
->    PHYSIOLOGICALLY-RELEVANT?
->    PREDECESSORS
->    PRIMARIES
->    REACTION-DIRECTION
->    REACTION-LIST
->    REGULATED-BY
->    REQUIREMENTS
->    RIGHT
->    RXN-LOCATIONS
->    SIGNAL
->    SPECIES
->    SPONTANEOUS?
->    STD-REDUCTION-POTENTIAL
->    SYNONYMS
->    SYSTEMATIC-NAME
->    TEMPLATE-FILE
+
 
 ## Task 1
 
@@ -113,7 +73,31 @@ It is a data structure that works like an `ArrayBlockingQueue`. It has the follo
 This task creates a `DBWriter` class that has the following methods
 
 - `connectToDB` creates a connection to a database
+- `insertQuery` returns sql query string
 
+##Task 5
+
+In this task a `Log` class was created that handles the log througn the following methods
+
+- `log` builds the log, and sets the time of the log
+- `write` writes the log to a log file
+
+
+## Task 6
+
+In this task, the `FileParserApp` was created that implememts the following methods
+
+- `producer` handles parsing of the file, writing its content to a filebuffer and also logging its activities to a logbuffer
+- `logwriter` reads the content in the logbuffer and writes it to a logfile
+- `consumer` picks the content of the filebuffer, inserts them into a database and at the sametime, it logs it's activities to a logbuffer.
+
+
+##Task 7
+Finally A main class was created with multiple threads that run all the activities multithreadedly. 
+
+##TEST
+
+test were written for the methods in the classes and are located in the src/test/java directory
 
 
 
