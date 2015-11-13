@@ -57,8 +57,8 @@ public class FileParserApp {
         fileName = "reactions.dat";
         record = new Record();
         logWriter = new Log("File Parser" );
-        fileBuffer = new TempBuffer(1224);
-        logBuffer = new TempBuffer<>(1224);
+        fileBuffer = new TempBuffer(3);
+        logBuffer = new TempBuffer<>(3);
         records = new ArrayList<Record>();
         logfile = "log.txt";
         reading = true;
@@ -109,7 +109,7 @@ public class FileParserApp {
      * @throws SQLException
      * @throws InterruptedException
      */
-    public static void consumer() throws SQLException, InterruptedException {
+    public void consumer() throws SQLException, InterruptedException {
         Record record = new Record();
 
         String dbms = DBConstants.DBMS;
@@ -139,6 +139,7 @@ public class FileParserApp {
 
             logBuffer.insert(log.write(messageToLog));
         }
+        setWriting(false);
 
     }
 

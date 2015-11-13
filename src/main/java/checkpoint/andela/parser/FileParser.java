@@ -92,13 +92,15 @@ public class FileParser implements Runnable{
 
         KeyValue kv = new KeyValue();
 
-        for (int i = 0; i < arr.length-1; i++) {
-
-            kv.setKey(arr[i]);
-
-            kv.setValue(arr[i + 1]);
-
-            }
+//        for (int i = 0; i < arr.length-1; i++) {
+//
+//            kv.setKey(arr[i]);
+//
+//            kv.setValue(arr[i + 1]);
+//
+//            }
+        kv.setKey(arr[0]);
+        kv.setValue(arr[1]);
 
         return kv;
     }

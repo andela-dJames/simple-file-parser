@@ -32,7 +32,7 @@ public class DBWriter {
     public Connection connectToDB(String dbms, String serverName, String portno, String db, String username, String password ) throws SQLException {
         Connection connection = null;
 
-        connection = DriverManager.getConnection("jdbc:"+ dbms + "://" + serverName + ":" + portno + "/" + db, buildPropperties(username, password) );
+        connection = DriverManager.getConnection("jdbc:"+ dbms + "://" + serverName + ":" + portno + "/" + db, buildProperties(username, password) );
 
         return connection;
     }
@@ -43,7 +43,7 @@ public class DBWriter {
      * @param password the password of the user
      * @return
      */
-    public Properties buildPropperties(String user, String password) {
+    public Properties buildProperties(String user, String password) {
         Properties properties = new Properties();
         properties.put("user", user);
         properties.put("password", password);
