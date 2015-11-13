@@ -63,13 +63,13 @@ The fileparser class consist of a `Filereader` inner class which has the followi
 
 3.`isComment` ignores lines that are comments
 
-*`invalid` ignores invalid lines
+-`invalid` ignores invalid lines
 
-*`replace` adds double backslash to single quotes
+-`replace` adds double backslash to single quotes
 
-*`remove` removes a space
+-`remove` removes a space
 
-*`delimeter` separates each line using a delimeter
+-`delimeter` separates each line using a delimeter
 
 
 
