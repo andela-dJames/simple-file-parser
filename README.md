@@ -57,19 +57,19 @@ To get more information on the format of the file, [visit PATHWAY TOOLS DATA-FIL
 The first task creates a Fileparser class that has methods for reading and parsing the reactant file into different records.
 The fileparser class consist of a `Filereader` inner class which has the following methods:
 
-1.`createFile` creates a new bufferedfilereader
+1. `createFile` creates a new bufferedfilereader
 
-2.`readFile` reads a file
+2. `readFile` reads a file
 
-3.`isComment` ignores lines that are comments
+3. `isComment` ignores lines that are comments
 
--`invalid` ignores invalid lines
+- `invalid` ignores invalid lines
 
--`replace` adds double backslash to single quotes
+- `replace` adds double backslash to single quotes
 
--`remove` removes a space
+- `remove` removes a space
 
--`delimeter` separates each line using a delimeter
+- `delimeter` separates each line using a delimeter
 
 
 
