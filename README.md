@@ -52,7 +52,7 @@ To get more information on the format of the file, [visit PATHWAY TOOLS DATA-FIL
 >    SYSTEMATIC-NAME
 >    TEMPLATE-FILE
 
-## Task one
+## Task 1
 
  The first task creates a `FileParser` class that has methods for reading and parsing the reactant file into different records.
 1. The fileparser class consist of a `Filereader` inner class which has the following methods:
@@ -90,7 +90,32 @@ To get more information on the format of the file, [visit PATHWAY TOOLS DATA-FIL
 - `getValues` returns a stringbuilder with all the row names.
 - `UNIQUE-ID` returns an object in a set of record which is unique key.
 
-##TASK 2
+##Task 2
+
+1. This tasks sets up the MYSQL database.
+- Create a new Database with name > reactiondb
+- Create a new Table with name >reactions
+- Adds all the column names to the table.
+
+2. Intall the MySQL j/connector
+
+##Task 3
+
+This task creates the `TempBuffer` class. This is a buffer that will hold the data that has been parsed before they are inserted into the database.
+It is a data structure that works like an `ArrayBlockingQueue`. It has the following methods:
+
+- `insert` adds a new item into a `TempBuffer`.
+- `remove` removes and returns the object at the top of the queue
+- `contains` returns true if a buffer contains an object.
+- `size` returns the size of the buffer
+
+##Task 4
+This task creates a `DBWriter` class that has the following methods
+
+- `connectToDB` creates a connection to a database
+
+
+
 
 
 
