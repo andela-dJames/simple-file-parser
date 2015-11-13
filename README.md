@@ -54,8 +54,8 @@ To get more information on the format of the file, [visit PATHWAY TOOLS DATA-FIL
 
 ## Task one
 
-The first task creates a `FileParser` class that has methods for reading and parsing the reactant file into different records.
-The fileparser class consist of a `Filereader` inner class which has the following methods:
+ The first task creates a `FileParser` class that has methods for reading and parsing the reactant file into different records.
+1. The fileparser class consist of a `Filereader` inner class which has the following methods:
 
 - `createFile` creates a new bufferedfilereader
 
@@ -71,15 +71,15 @@ The fileparser class consist of a `Filereader` inner class which has the followi
 
 - `delimeter` separates each line using a delimeter
 
- The `FileParser` outer class consist of the following methods
+ 2. The `FileParser` outer class consist of the following methods
  
 - `parse` parses a record containing all the records into smaller records using `UNIQUE-ID`.
 - `parseFile` reads a file and parse its content into `KeyValue` pairs.
 - `createKeyValue` takes an array of strings and creates `KeyValue` object.
 
-The `KeyValue` class is an object that defines key-value pair.
+3. The `KeyValue` class is an object that defines key-value pair.
 
-The `Record` class consist of the following method
+4. The `Record` class consist of the following method
 - `addNewKeyValue` adds a new object into a set of Records.
 - `getKeyValue` returns the objects in a set of records.
 - `size` returns the size of a reccord
@@ -89,7 +89,8 @@ The `Record` class consist of the following method
 - `getKeys` returns a string builder with all the field names.
 - `getValues` returns a stringbuilder with all the row names.
 - `UNIQUE-ID` returns an object in a set of record which is unique key.
-- 
+
+##TASK 2
 
 
 
