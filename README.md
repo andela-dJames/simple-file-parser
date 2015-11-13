@@ -7,7 +7,7 @@ The application runs asyncronously i.e different threads run all the tasks simul
 
 The file contains set of data  which was expoted from a Pathway/Geneome Database PGDB so that other programs and database management systems caan use them.
 The data files generated from each PGDB fall into the following categories of formats. Note that in most cases the tabular files provide a subset of the information found in the attribute-value format files, but are typically easier to use.
-To get more information on the format of the file, ([visit] (http://bioinformatics.ai.sri.com/ptools/flatfile-format.html)
+To get more information on the format of the file, [visit] (http://bioinformatics.ai.sri.com/ptools/flatfile-format.html)
 
 
 >    UNIQUE-ID
@@ -54,6 +54,15 @@ To get more information on the format of the file, ([visit] (http://bioinformati
 
 ## Task one
 
-The first task creates a Fileparser class that has methods for reading and parsing the reactant file into different records
+The first task creates a Fileparser class that has methods for reading and parsing the reactant file into different records.
+The fileparser class consist of a `Filereader` inner class which has the following methods:
+*`createFile` creates a new bufferedfilereader
+*`readFile` reads a file
+*`isComment` ignores lines that are comments
+*`invalid` ignores invalid lines
+*`replace` adds double backslash to single quotes
+*`remove` removes a space
+*`delimeter` separates each line using a delimeter
+
 
 
