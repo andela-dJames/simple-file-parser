@@ -179,9 +179,17 @@ public class FileParser implements Runnable{
         public String delimetier(String delimeter) {
             return delimeter;
         }
+
+        /**
+         * adds double backslash to a single quote ina line
+         */
         public  String replace( String line) {
             return line.replace("'", "\\'");
         }
+
+        /**
+         * removes spacees form a line
+         */
         public String remove(String line) {
             return line.replace("CobA [ambiguous - ", "CobA [ambiguous-");
         }

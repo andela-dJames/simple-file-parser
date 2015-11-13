@@ -3,18 +3,33 @@ package checkpoint.andela.parser;
 import java.util.ArrayList;
 
 /**
- *
+ * A class for holding a set of data
  */
 public class Record {
+    /**
+     * A list of key-value objects
+     */
     private ArrayList<KeyValue> record;
 
+    /**
+     * cretaes a new record
+     */
     public Record() {
         record = new ArrayList<KeyValue>();
     }
 
+    /**
+     * adds a new object to a record
+     * @param kv the object to be added
+     */
     public void addnewKeyValue(KeyValue kv) {
         record.add(kv);
     }
+
+    /**
+     * Adds a set of similar object to a record
+     * @param kv object to be added
+     */
     public void addnewKeyValue(KeyValue... kv) {
         for (KeyValue k : kv){
             record.add(k);
@@ -22,6 +37,9 @@ public class Record {
 
     }
 
+    /**
+     * @returns all the objects in a record
+     */
     public KeyValue getKeyValue() {
         KeyValue keyValue;
         for (KeyValue kv: record){
@@ -39,6 +57,10 @@ public class Record {
         this.record = record;
     }
 
+    /**
+     *
+     * @return the size of a record.
+     */
     public int size() {
         return record.size();
     }
@@ -54,6 +76,11 @@ public class Record {
     public void clear() {
         record.clear();
     }
+
+    /**
+     *
+     * @return all the keys in a record in the form of a string
+     */
     public String getKeys() {
         StringBuilder keys = new StringBuilder();
         for (KeyValue kv : fields()){
@@ -64,7 +91,10 @@ public class Record {
         keys.deleteCharAt(keys.length() - 1);
         return keys.toString();
     }
-
+    /**
+     *
+     * @return all the values in a record in the form of a string
+     */
     public String getValues() {
         StringBuilder values = new StringBuilder();
         for (KeyValue kv : fields()){
@@ -77,7 +107,11 @@ public class Record {
         values.deleteCharAt(values.length() - 1);
         return values.toString();
     }
-    public ArrayList<KeyValue> fields () {
+
+    /**
+     * @return the fields and ignores repeated field names.
+     */
+    private ArrayList<KeyValue> fields () {
 
         ArrayList<KeyValue> fields = new ArrayList<>();
         for (KeyValue kv: record){
@@ -88,19 +122,10 @@ public class Record {
         return fields;
     }
 
-    public ArrayList<KeyValue> rows(){
-        ArrayList<KeyValue> rows = new ArrayList<>();
-
-        for (KeyValue kv : record){
-            if (!found(rows, kv.getKey())){
-
-                rows.add(kv);
-            }
-        }
-        return rows;
-    }
-
-    public boolean found(ArrayList<KeyValue> kv, String identical) {
+    /**
+     * @return true if a key is reapeated
+     */
+    private boolean found(ArrayList<KeyValue> kv, String identical) {
         for (KeyValue k: kv){
             if (k.getKey().equals(identical)){
                 return true;
@@ -109,6 +134,10 @@ public class Record {
         return false;
     }
 
+    /**
+     *
+     * @return the key and value of the unique item.
+     */
     public String uniqueID() {
         String id = "";
         for (KeyValue kv: record){

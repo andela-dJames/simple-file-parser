@@ -104,7 +104,6 @@ public class FileParserApp {
         }
 
     }
-
     /**
      * writes the record from the buffer to a database
      * @throws SQLException
@@ -157,8 +156,5 @@ public class FileParserApp {
 
     public void setWriting(boolean writing) {
         this.writing = writing;
-    }
-    public static String rep( String line) {
-        return line.replace("'", "\\'");
     }
 }
