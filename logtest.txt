@@ -2,3 +2,6 @@ A log writer test--2015-11-12 16:07--A log writer test
 A log writer test--2015-11-12 16:10--A log writer test
 A log writer test--2015-11-12 16:14--A log writer test
 A log writer test--2015-11-12 16:14--A log writer test
+A log writer test--2015-11-13 15:24--A log writer test
+A log writer test--2015-11-13 15:25--A log writer test
+A log writer test--2015-11-13 15:26--A log writer test

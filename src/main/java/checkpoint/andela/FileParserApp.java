@@ -120,14 +120,14 @@ public class FileParserApp {
         String username = System.getenv(DBConstants.USER_NAME);
         String password = System.getenv(DBConstants.PASSWORD);
 
-         Statement stmt = null;
+        Statement stmt = null;
         Connection con = null;
 
         DBWriter dbWriter = new DBWriter();
         con = dbWriter.connectToDB(dbms, serverName, portno, db, username, password);
         stmt = con.createStatement();
 
-       while (reading || !fileBuffer.isEmpty()) {
+        while (reading || !fileBuffer.isEmpty()) {
 
             record = fileBuffer.Remove();
 
@@ -137,7 +137,7 @@ public class FileParserApp {
 
             String messageToLog = "collected " + record.uniqueID() + " from Buffer";
 
-           logBuffer.insert(log.write(messageToLog));
+            logBuffer.insert(log.write(messageToLog));
         }
 
     }

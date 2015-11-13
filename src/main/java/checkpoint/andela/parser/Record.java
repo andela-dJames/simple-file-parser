@@ -22,7 +22,7 @@ public class Record {
      * adds a new object to a record
      * @param kv the object to be added
      */
-    public void addnewKeyValue(KeyValue kv) {
+    public void addNewKeyValue(KeyValue kv) {
         record.add(kv);
     }
 
@@ -30,7 +30,7 @@ public class Record {
      * Adds a set of similar object to a record
      * @param kv object to be added
      */
-    public void addnewKeyValue(KeyValue... kv) {
+    public void addNewKeyValue(KeyValue... kv) {
         for (KeyValue k : kv){
             record.add(k);
         }
