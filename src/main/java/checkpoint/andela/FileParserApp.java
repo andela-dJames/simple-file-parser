@@ -57,8 +57,8 @@ public class FileParserApp {
         fileName = "reactions.dat";
         record = new Record();
         logWriter = new Log("File Parser" );
-        fileBuffer = new TempBuffer(1224);
-        logBuffer = new TempBuffer<>(1224);
+        fileBuffer = new TempBuffer(3);
+        logBuffer = new TempBuffer<>(3);
         records = new ArrayList<Record>();
         logfile = "log.txt";
         reading = true;
@@ -109,7 +109,7 @@ public class FileParserApp {
      * @throws SQLException
      * @throws InterruptedException
      */
-    public static void consumer() throws SQLException, InterruptedException {
+    public void consumer() throws SQLException, InterruptedException {
         Record record = new Record();
 
         String dbms = DBConstants.DBMS;
@@ -120,14 +120,14 @@ public class FileParserApp {
         String username = System.getenv(DBConstants.USER_NAME);
         String password = System.getenv(DBConstants.PASSWORD);
 
-         Statement stmt = null;
+        Statement stmt = null;
         Connection con = null;
 
         DBWriter dbWriter = new DBWriter();
         con = dbWriter.connectToDB(dbms, serverName, portno, db, username, password);
         stmt = con.createStatement();
 
-       while (reading || !fileBuffer.isEmpty()) {
+        while (reading || !fileBuffer.isEmpty()) {
 
             record = fileBuffer.Remove();
 
@@ -137,8 +137,9 @@ public class FileParserApp {
 
             String messageToLog = "collected " + record.uniqueID() + " from Buffer";
 
-           logBuffer.insert(log.write(messageToLog));
+            logBuffer.insert(log.write(messageToLog));
         }
+        setWriting(false);
 
     }
 

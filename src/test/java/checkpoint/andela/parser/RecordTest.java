@@ -3,8 +3,6 @@ package checkpoint.andela.parser;
 import junit.framework.TestCase;
 import org.junit.Test;
 
-import java.util.ArrayList;
-
 /**
  * A Test for Record class.
  */
@@ -20,7 +18,7 @@ public class RecordTest extends TestCase {
         KeyValue kv5 = new KeyValue("TYPES", "Small-Molecule-Reactions");
         KeyValue kv6 = new KeyValue("TYPE", "Small-Molecule-Reactions");
 
-        record.addnewKeyValue(kv, kv2, kv3, kv4, kv5, kv6);
+        record.addNewKeyValue(kv, kv2, kv3, kv4, kv5, kv6);
     }
     @Test
     public void testAddnewKeyValue() throws Exception {
@@ -40,11 +38,5 @@ public class RecordTest extends TestCase {
         assertEquals(id, "UNIQUE-ID: PPGPPSYN-RXN" );
 
     }
-    @Test
-    public void testFields() {
-        ArrayList<KeyValue> f = record.rows();
-        for (KeyValue kv: f){
-            System.out.println(kv.getValue());
-        }
-    }
+
 }

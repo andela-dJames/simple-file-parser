@@ -55,7 +55,7 @@ public class Log {
      * @throws IOException
      */
     public static void write (String fileName, String mesg) throws IOException {
-        mesg = log(mesg);
+        //mesg = log(mesg);
         BufferedWriter bw = null;
         try {
 

@@ -45,7 +45,7 @@ public class FileParser implements Runnable{
                 rec = new Record();
             }
 
-            rec.addnewKeyValue(kv);
+            rec.addNewKeyValue(kv);
 
         }while (!record.isEmpty());
 
@@ -72,9 +72,9 @@ public class FileParser implements Runnable{
             if (!filereader.isComment(line) &&!filereader.isNewLine(line) && !filereader.invalid(line)){
                 line = filereader.replace(line);
                 line = filereader.remove(line);
-                 String[] arr = line.trim().split(filereader.delimetier(" - "));
+                 String[] arr = line.trim().split(filereader.delimiter(" - "));
 
-                record.addnewKeyValue(ceateKeyValue(arr));
+                record.addNewKeyValue(createKeyValue(arr));
 
             }
         }
@@ -88,17 +88,19 @@ public class FileParser implements Runnable{
      * @param arr
      * @return
      */
-    private KeyValue ceateKeyValue(String[] arr) {
+    private KeyValue createKeyValue(String[] arr) {
 
         KeyValue kv = new KeyValue();
 
-        for (int i = 0; i < arr.length-1; i++) {
-
-            kv.setKey(arr[i]);
-
-            kv.setValue(arr[i + 1]);
-
-            }
+//        for (int i = 0; i < arr.length-1; i++) {
+//
+//            kv.setKey(arr[i]);
+//
+//            kv.setValue(arr[i + 1]);
+//
+//            }
+        kv.setKey(arr[0]);
+        kv.setValue(arr[1]);
 
         return kv;
     }
@@ -172,12 +174,12 @@ public class FileParser implements Runnable{
         }
 
         /**
-         * A line delimeter
-         * @param delimeter the line delimeter
-         * @return the delimeter
+         * A line delimiter
+         * @param delimiter the line delimiter
+         * @return the delimiter
          */
-        public String delimetier(String delimeter) {
-            return delimeter;
+        public String delimiter(String delimiter) {
+            return delimiter;
         }
 
         /**
